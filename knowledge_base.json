@@ -1,0 +1,7 @@
+{
+    "ERROR": "Critical Path Failure. Action: Check netlist connectivity.",
+    "FATAL": "System Halt. Action: Memory overflow; check heap size.",
+    "VIOLATION": "Timing Constraint Breach. Action: Review slack reports.",
+    "FAIL": "Verification Failed. Action: Rerun simulation with full trace.",
+    "DEFAULT": "Issue detected. Action: Escalate to Senior Architect."
+}

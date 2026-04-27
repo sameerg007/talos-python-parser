@@ -1,0 +1,14 @@
+{
+  "DFF": {
+    "severity": "INFO",
+    "impact": "Sequential element (Flip-Flop) detected in path.",
+    "resolution": "Verify setup/hold requirements at this endpoint.",
+    "sop": "PD-TIMING-01"
+  },
+  "BUFX": {
+    "severity": "WARNING",
+    "impact": "High-drive buffer detected.",
+    "resolution": "Ensure this buffer isn't over-loading the previous stage.",
+    "sop": "PD-OPT-09"
+  }
+}

@@ -1,0 +1,14 @@
+# TALOS Full Path Report - Scenario: High Fanout & Sequential Stall
+# Path 1: Data Path to Register
+INST {proc0/core/alu/g101} {A} {^} {Y} {v} {} {INVX1} {0.045} {0.010} {0.012} {} {0.100} {3.500} {} {1} {(10.0, 20.0) (10.2, 20.1)}
+  NET {proc0/core/alu/n1} {} {} {} {} {} {} {0.001} {0.001} {0.012} {0.002} {0.101} {3.500} {} {} {}
+INST {proc0/core/alu/g105} {B} {v} {Y} {^} {} {NOR2X4} {0.082} {0.015} {0.045} {} {0.183} {3.500} {} {4} {(12.5, 22.0) (12.7, 22.3)}
+  NET {proc0/core/alu/n5} {} {} {} {} {} {} {0.005} {0.005} {0.045} {0.008} {0.188} {3.500} {} {} {}
+INST {proc0/core/alu/buf_long_net} {A} {^} {Y} {v} {} {BUFX12} {0.195} {0.020} {0.150} {} {0.383} {3.500} {} {12} {(45.0, 50.0) (46.0, 51.0)}
+  NET {proc0/core/alu/n_long} {} {} {} {} {} {} {0.012} {0.010} {0.150} {0.025} {0.395} {3.500} {} {} {}
+INST {proc0/core/alu/reg_in_0} {D} {v} {Q} {^} {} {DFFRX2} {0.210} {0.010} {0.080} {} {0.605} {3.500} {} {2} {(100.1, 105.0) (101.0, 106.0)}
+  NET {proc0/core/alu/n_out} {} {} {} {} {} {} {0.002} {0.002} {0.080} {0.005} {0.607} {3.500} {} {} {}
+
+# Global Design Markers
+METRIC: TOTAL NEGATIVE SLACK (TNS) = -1.245ns
+METRIC: DESIGN CONGESTION LEVEL = HIGH

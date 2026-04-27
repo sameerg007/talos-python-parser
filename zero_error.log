@@ -1,0 +1,24 @@
+#####################################################################
+# Cadence Innovus Implementation System Startup Log
+# Version: 17.14-s077_1
+#####################################################################
+
+--- Creating the Implementation System ---
+--- Loading Technology ---
+--- Loading Timing ... ---
+
+Reading design: 'leon'
+Information: Design 'leon' has 1845 cells (1200 combinational, 645 sequential).
+Information: 21 messages have been suppressed for this design run.
+
+set_verify_drc_mode -check_implant true -check_implant_across_rows false \
+-check_ndr_spacing false -check_same_via_cell false -disable_rules "" \
+-exclude_pg_net false -ignore_trial_route false -limit 1000 \
+-report leon.drc.rpt
+
+# Applying message suppression to clean up log noise
+set_message_info -id IMPLF-201 -suppress
+set_message_info -id IMPLF-202 -suppress
+set_message_info -id IMPLF-203 -suppress
+
+--- Initialization Complete. Starting PnR Flow ---
